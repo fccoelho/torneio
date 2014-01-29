@@ -7,4 +7,4 @@ class Jogador(models.Model):
 
 class Estrategia(models.Model):
     codigo = models.TextField()
-    autor = models.ForeignKey(Jogador)
+    autor = models.EmailField()
