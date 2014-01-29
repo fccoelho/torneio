@@ -4,8 +4,15 @@
     <title></title>
 </head>
 <body>
-<h>Torneio de Verão EMAp</h>
+<h1>Torneio de Verão EMAp</h1>
 <br>
-Autor: {{ autor }}
+<h2>Estratégias já cadastradas:</h2>
+<ul>
+    {% for e in estrategias %}
+        <li><b>{{ e.nome }}</b>, <br> autor: {{ e.autor }}</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url "estrategia_add" %}"> Cadastrea a sua estratégia!</a>
 </body>
 </html>
